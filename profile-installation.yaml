@@ -1,0 +1,13 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileInstallation
+metadata:
+  creationTimestamp: null
+  name: pctl-profile
+  namespace: 75d0784b-365d-45d6-b7ee-7142efabe139
+spec:
+  configMap: pprof-values
+  source:
+    branch: dep-with-wrap
+    path: weaveworks-nginx
+    url: https://github.com/Skarlso/profiles-examples
+status: {}
