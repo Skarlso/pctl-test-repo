@@ -1,0 +1,21 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: pctl-profile-nginx-bitnami-nginx
+  namespace: 5a031e5e-29ea-43e4-a686-cdb946b88dde
+spec:
+  healthChecks:
+  - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    kind: HelmRelease
+    name: pctl-profile-nginx-bitnami-nginx
+    namespace: 5a031e5e-29ea-43e4-a686-cdb946b88dde
+  interval: 5m0s
+  path: nginx/artifacts/bitnami-nginx/helm-chart
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: pctl-repo
+    namespace: 5a031e5e-29ea-43e4-a686-cdb946b88dde
+  targetNamespace: 5a031e5e-29ea-43e4-a686-cdb946b88dde
+status: {}
