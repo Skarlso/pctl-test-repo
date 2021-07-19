@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  default-values.yaml: |
+    service:
+      type: ClusterIP
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: pprof-nginx-chart-defaultvalues
+  namespace: 7d61c337-bf3b-4739-a9a4-95e167e90928

@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  creationTimestamp: null
+  name: pprof-profiles-examples-redis
+  namespace: 7d61c337-bf3b-4739-a9a4-95e167e90928
+spec:
+  interval: 0s
+  url: https://charts.bitnami.com/bitnami
+status: {}
