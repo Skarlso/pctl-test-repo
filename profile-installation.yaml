@@ -1,0 +1,13 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileInstallation
+metadata:
+  creationTimestamp: null
+  name: pprof
+  namespace: 4e6bed95-1928-4ba7-b66b-4901d3bd0f8f
+spec:
+  configMap: pprof-values
+  source:
+    branch: dep-with-wrap
+    path: weaveworks-nginx
+    url: https://github.com/Skarlso/profiles-examples
+status: {}

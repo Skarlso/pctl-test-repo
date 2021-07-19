@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: pprof-weaveworks-nginx-nginx-deployment
+  namespace: 4e6bed95-1928-4ba7-b66b-4901d3bd0f8f
+spec:
+  interval: 5m0s
+  path: artifacts/nginx-deployment/nginx/deployment
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: pctl-repo
+    namespace: 4e6bed95-1928-4ba7-b66b-4901d3bd0f8f
+  targetNamespace: 4e6bed95-1928-4ba7-b66b-4901d3bd0f8f
+status: {}
