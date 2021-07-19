@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  creationTimestamp: null
+  name: pprof-weaveworks-nginx-dependon-chart
+  namespace: 959c18d6-3022-4fb9-bf4f-a33c342b5980
+spec:
+  chart:
+    spec:
+      chart: redis
+      sourceRef:
+        kind: HelmRepository
+        name: pprof-profiles-examples-redis
+        namespace: 959c18d6-3022-4fb9-bf4f-a33c342b5980
+      version: 14.6.1
+  interval: 0s
+  valuesFrom:
+  - kind: ConfigMap
+    name: pprof-dependon-chart-defaultvalues
+    valuesKey: default-values.yaml
+  - kind: ConfigMap
+    name: pprof-values
+    valuesKey: dependon-chart
+status: {}
